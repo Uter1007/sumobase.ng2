@@ -7,5 +7,5 @@ import '../style/app.scss';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    
+    url = 'https://github.com/uter1007';
 }
