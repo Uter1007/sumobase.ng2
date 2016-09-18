@@ -2,6 +2,9 @@
 *.log
 # !logs/all-logs.log
 
+#npm logs
+npm-debug.log.*
+
 # Runtime data
 pids
 *.pid
