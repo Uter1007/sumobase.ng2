@@ -6,11 +6,16 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
+import { MdButtonModule } from '@angular2-material/button';
+import { MdCardModule } from '@angular2-material/card';
+
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
         FormsModule,
+        MdButtonModule.forRoot(),
+        MdCardModule.forRoot(),
     ],
     declarations: [
         AppComponent
