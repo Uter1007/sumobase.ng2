@@ -29,16 +29,17 @@ import {OverlayModule} from '@angular2-material/core/overlay/overlay-directives'
 import {MdMenuModule} from '@angular2-material/menu/menu';
 import {RtlModule} from '@angular2-material/core/rtl/dir';
 
-import { NgReduxModule } from 'ng2-redux';
+import {Store, StoreModule} from '@ngrx/store';
+import {counterReducer} from './reducers/counter.reducer';
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
         FormsModule,
-        NgReduxModule,
         MdButtonModule.forRoot(),
         MdCardModule.forRoot(),
+        StoreModule.provideStore({ counter: counterReducer }, { counter: 0 })
     ],
     declarations: [
         AppComponent
