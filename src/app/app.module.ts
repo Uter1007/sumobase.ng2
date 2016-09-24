@@ -31,6 +31,8 @@ import {RtlModule} from '@angular2-material/core/rtl/dir';
 
 import {Store, StoreModule} from '@ngrx/store';
 import {counterReducer} from './reducers/counter.reducer';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {StoreLogMonitorModule, useLogMonitor} from '@ngrx/store-log-monitor';
 
 @NgModule({
     imports: [
@@ -39,7 +41,14 @@ import {counterReducer} from './reducers/counter.reducer';
         FormsModule,
         MdButtonModule.forRoot(),
         MdCardModule.forRoot(),
-        StoreModule.provideStore({ counter: counterReducer }, { counter: 0 })
+        StoreModule.provideStore({ counter: counterReducer }, { counter: 0 }),
+        StoreDevtoolsModule.instrumentStore({
+            monitor: useLogMonitor({
+                visible: true,
+                position: 'right'
+            })
+        }),
+        StoreLogMonitorModule
     ],
     declarations: [
         AppComponent
