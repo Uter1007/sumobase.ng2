@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+import { RouterModule } from '@angular/router';
 
 import {MdButtonToggleModule} from '@angular2-material/button-toggle/button-toggle';
 import {MdButtonModule} from '@angular2-material/button/button';
@@ -34,6 +35,8 @@ import {counterReducer} from './reducers/counter.reducer';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {StoreLogMonitorModule, useLogMonitor} from '@ngrx/store-log-monitor';
 
+import appRoutes from './app.routes';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -41,18 +44,19 @@ import {StoreLogMonitorModule, useLogMonitor} from '@ngrx/store-log-monitor';
         FormsModule,
         MdButtonModule.forRoot(),
         MdCardModule.forRoot(),
-        StoreModule.provideStore({ counter: counterReducer }, { counter: 0 }),
+        StoreModule.provideStore({
+            counter: counterReducer
+        }, { counter: 0 }),
         StoreDevtoolsModule.instrumentStore({
             monitor: useLogMonitor({
                 visible: true,
                 position: 'right'
             })
         }),
-        StoreLogMonitorModule
+        StoreLogMonitorModule,
+        appRoutes
     ],
-    declarations: [
-        AppComponent
-    ],
+    declarations: [AppComponent],
     providers: [],
     bootstrap: [AppComponent]
 })

@@ -9,5 +9,8 @@ import '@angular/router';
 import 'rxjs';
 import '@angularclass/hmr';
 
+import '@ngrx/store';
+import 'ngrx-store-logger';
+
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
