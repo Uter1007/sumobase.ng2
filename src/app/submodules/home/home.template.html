@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
-
-</body>
-</html>
+<md-card>
+    <button md-raised-button md-tooltip="Increment" (click)="increment()">Increment</button>
+    <button md-raised-button color="primary" (click)="decrement()">Decrement</button>
+    <button md-raised-button color="accent" (click)="reset()">Reset</button>
+    <div><button md-button>Current Count: {{ counter | async }}</button></div>
+</md-card>

@@ -7,12 +7,9 @@
 <!-- Images (and assets) are parsed and loaded from within the public directory -->
 <img src="public/img/angular.png">
 
-<md-card>
-    <button md-raised-button md-tooltip="Increment" (click)="increment()">Increment</button>
-    <button md-raised-button color="primary" (click)="decrement()">Decrement</button>
-    <button md-raised-button color="accent" (click)="reset()">Reset</button>
-    <div><button md-button>Current Count: {{ counter | async }}</button></div>
-</md-card>
+<router-outlet></router-outlet>
+
+
 
 </main>
 <footer>
@@ -22,5 +19,5 @@
 
 </footer>
 
-<router-outlet></router-outlet>
+
 <ngrx-store-log-monitor toggleCommand="ctrl-h" positionCommand="ctrl-m"></ngrx-store-log-monitor>
