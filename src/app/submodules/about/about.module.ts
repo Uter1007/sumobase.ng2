@@ -13,4 +13,4 @@ import {MdCardModule} from '@angular2-material/card';
     ],
     declarations: [AboutComponent]
 })
-export default class AboutModule{}
+export class AboutModule{}

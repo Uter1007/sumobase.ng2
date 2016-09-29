@@ -17,4 +17,4 @@ import {StoreModule} from '@ngrx/store';
     ],
     declarations: [HomeComponent]
 })
-export default class HomeModule{}
+export class HomeModule{}

@@ -4,11 +4,11 @@ import {RouterModule, Routes} from '@angular/router';
 export const routes: Routes = [
     {
         path: '',
-        loadChildren: './submodules/home/home.module'
+        loadChildren: './submodules/home/home.module#HomeModule'
     },
     {
         path: 'about',
-        loadChildren: './submodules/about/about.module'
+        loadChildren: './submodules/about/about.module#AboutModule'
     }
 ];
 
