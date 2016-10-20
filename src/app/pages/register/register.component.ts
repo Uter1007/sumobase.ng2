@@ -6,5 +6,11 @@ import {Component} from '@angular/core';
 })
 
 export class RegisterComponent {
-    
+
+    private user = {};
+
+    registerAction = () => {
+        console.log('register with data', this.user);
+    }
+
 }
