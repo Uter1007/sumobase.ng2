@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'register',
-    templateUrl: './register.template.html',
+    templateUrl: 'register.component.html',
 })
 
 export class RegisterComponent {

@@ -7,10 +7,9 @@ interface ICounterState {
     counter: number;
 }
 
-
 @Component({
     selector: 'home',  // <home></home>
-    templateUrl: './home.template.html'
+    templateUrl: './home.component.html'
 })
 export class HomeComponent{
     counter: Observable<number>;
